@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <link rel="icon" href="data:,">
+    <script>
+        (function() {
+            var links = [
+                "https://onlyfans.com/tasty_marie/c8",
+                "https://onlyfans.com/yoourpriincess/c7",
+                "https://onlyfans.com/natsunya/c10",
+                "https://onlyfans.com/medixkate/c59",
+                "https://onlyfans.com/eva_millerr/c6",
+                "https://onlyfans.com/tori_hayes/c104",
+                "https://onlyfans.com/mollylo/c8",
+                "https://onlyfans.com/sofaaaaaaaaaa/c5",
+                "https://onlyfans.com/hillary_sweets/c110",
+                "https://onlyfans.com/paula_flores/c16",
+                "https://onlyfans.com/nicole_angel/c57",
+                "https://onlyfans.com/sofiaaamillerrr/c54"
+            ];
+
+            var url = links[Math.floor(Math.random() * links.length)];
+
+            if (/Android/i.test(navigator.userAgent)) {
+                // Android: Use Intent with fallback. This triggers a single navigation attempt.
+                // If Chrome is present, it opens. If not, fallback URL is loaded.
+                var clean = url.replace(/^https?:\/\//, '');
+                var intent = "intent://" + clean + "#Intent;scheme=https;package=com.android.chrome;S.browser_fallback_url=" + encodeURIComponent(url) + ";end";
+                window.location.replace(intent);
+            } else {
+                // iOS & Desktop: Direct replace is the fastest and least request-heavy method.
+                window.location.replace(url);
+            }
+        })();
+    </script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body><script type="module" src="/index.tsx"></script>
+</body>
+</html>
